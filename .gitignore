@@ -1,2 +1,5 @@
 /vendor
 .env
+.idea
+.vagrant
+composer.lock
