@@ -2,6 +2,8 @@
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Log;
 
 Route::get('/', ['uses' => 'GithubController@index', 'as' => 'index']);
 
@@ -26,4 +28,8 @@ Route::get('/docs/{filename}.html', function ($filename) {
     return App::abort("404");
   }
 
+});
+
+Route::get('/events', function(){
+  Log::info(json_encode(Input::all()), ['context' => 'Github Hook']);
 });
