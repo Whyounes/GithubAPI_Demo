@@ -30,6 +30,6 @@ Route::get('/docs/{filename}.html', function ($filename) {
 
 });
 
-Route::get('/events', function(){
-  Log::info(json_encode(Input::all()), ['context' => 'Github Hook']);
+Route::post('/events', function(){
+  //Log::info(json_encode(Input::all()), ['context' => 'Github Hook']);
 });
