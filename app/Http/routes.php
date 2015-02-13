@@ -1,6 +1,8 @@
 <?php
 
+use App\Hook;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
@@ -31,7 +33,15 @@ Route::get('/docs/{filename}.html', function ($filename) {
 
 });
 
-Route::post('/events', function(){
-  return new Response();
-  //Log::info(json_encode(Input::all()), ['context' => 'Github Hook']);
+Route::get('/events', function (Request $request) {
+  //check for User agent to determine the sender `GitHub-Hookshot/`
+  $event_name = $request->header('X-Github-Event');
+  $body = (string) Input::all();
+
+  Hook::create([
+    'event_name'  => $event_name,
+    'payload'     => $body
+  ]);
+
+  return new Response();// 200 OK
 });
