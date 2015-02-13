@@ -33,7 +33,7 @@ Route::get('/docs/{filename}.html', function ($filename) {
 
 });
 
-Route::get('/events', function (Request $request) {
+Route::post('/events', function (Request $request) {
   //check for User agent to determine the sender `GitHub-Hookshot/`
   $event_name = $request->header('X-Github-Event');
   $body = (string) Input::all();
