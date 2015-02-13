@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
@@ -31,5 +32,6 @@ Route::get('/docs/{filename}.html', function ($filename) {
 });
 
 Route::post('/events', function(){
+  return new Response();
   //Log::info(json_encode(Input::all()), ['context' => 'Github Hook']);
 });
