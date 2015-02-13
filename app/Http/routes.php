@@ -34,6 +34,7 @@ Route::get('/docs/{filename}.html', function ($filename) {
 });
 
 Route::post('/events', function (Request $request) {
+  // test X-Hub-Signature with the one registered on Github webhook
   //check for User agent to determine the sender `GitHub-Hookshot/`
   $event_name = $request->header('X-Github-Event');
   $body = json_encode(Input::all());
@@ -45,4 +46,11 @@ Route::post('/events', function (Request $request) {
   $hook->save();
 
   return $event_name . ' -- ' . $body;// 200 OK
+});
+
+
+Route::get('/dump', function(){
+  $hooks = Hook::all();
+
+  dd($hooks);
 });
