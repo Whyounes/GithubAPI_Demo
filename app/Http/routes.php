@@ -52,5 +52,5 @@ Route::post('/events', function (Request $request) {
 Route::get('/dump', function(){
   $hooks = Hook::all();
 
-  dd($hooks);
+  return $hooks->toJson();
 });
