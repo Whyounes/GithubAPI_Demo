@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Hook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Input;
