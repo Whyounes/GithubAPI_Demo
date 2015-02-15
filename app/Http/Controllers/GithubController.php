@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\View;
@@ -124,5 +125,21 @@ class GithubController extends Controller
   {
     dd($e->getCode() . ' - ' . $e->getMessage());
   }
+
+  public function storeEvents(Request $request) {
+    // test X-Hub-Signature with the one registered on Github webhook
+    //check for User agent to determine the sender `GitHub-Hookshot/`
+    $event_name = $request->header('X-Github-Event');
+    $body = Input::all();
+
+    $hook = new Hook;
+    $hook->event_name = $event_name;
+    $hook->payload = $body;
+
+    $hook->save();
+
+    return '';// 200 OK
+  }
+  
 }
  
