@@ -131,7 +131,7 @@ class GithubController extends Controller
     // test X-Hub-Signature with the one registered on Github webhook
     //check for User agent to determine the sender `GitHub-Hookshot/`
     $event_name = $request->header('X-Github-Event');
-    $body = Input::all();
+    $body = json_encode(Input::all());
 
     $hook = new Hook;
     $hook->event_name = $event_name;
