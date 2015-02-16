@@ -15,15 +15,10 @@ Route::get('/commits', ['uses' => 'GithubController@commits', 'as' => 'commits']
 
 Route::get('/authorizations', ['uses' => 'GithubController@authorizations', 'as' => 'authorizations']);
 
-Route::get('/docs/{filename}.html', function ($filename) {
-  try {
-    $path = base_path('resources/views/docs/') . $filename . '.md';
-    $content = File::get($path);
 
-    return View::make('doc', ['content' => $content]);
-  } catch (FileNotFoundException $ex) {
-    //return to index
-    return App::abort("404");
-  }
+// Github Webhooks part
+Route::post('/events', ['uses' => 'GithubController@storeEvents']);
 
-});
+Route::get('/reports/contributions.json', ['uses' => 'GithubController@contributionsJson']);
+
+Route::get('/reports/contributions', ['uses' => 'GithubController@contributions']);

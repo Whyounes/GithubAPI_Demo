@@ -124,5 +124,42 @@ class GithubController extends Controller
   {
     dd($e->getCode() . ' - ' . $e->getMessage());
   }
+
+  public function storeEvents(Request $request) {
+    $event_name = $request->header('X-Github-Event');
+    $body = json_encode(Input::all());
+
+    $hook = new Hook;
+    $hook->event_name = $event_name;
+    $hook->payload = $body;
+
+    $hook->save();
+
+    return '';// 200 OK
+  }
+
+  public function contributionsJson(){
+    $hooks = Hook::where('event_name', '=', 'push')->get(['payload']);
+
+    $users = [];
+    $hooks->each(function ($item) use (&$users) {
+      $item = json_decode($item['payload']);
+
+      $pusherName = $item->pusher->name;
+      $commitsCount = count($item->commits);
+
+      $users[$pusherName] = array_pull($users, $pusherName, 0) + $commitsCount;
+    });
+
+    return [
+        'users'   => array_keys($users),
+        'commits'  => array_values($users)
+    ];
+  }
+
+  public function contributions(){
+
+    return View::make('reports.contributions');
+  }
 }
  
