@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
 
 
-Route::get('/', ['uses' => 'GithubController@index', 'as' => 'index']);
+/*Route::get('/', ['uses' => 'GithubController@index', 'as' => 'index']);
 
 Route::get('/finder', ['uses' => 'GithubController@finder', 'as' => 'finder']);
 
@@ -19,7 +19,7 @@ Route::post('/update', ['uses' => 'GithubController@update', 'as' => 'update_fil
 
 Route::get('/commits', ['uses' => 'GithubController@commits', 'as' => 'commits']);
 
-Route::get('/authorizations', ['uses' => 'GithubController@authorizations', 'as' => 'authorizations']);
+Route::get('/authorizations', ['uses' => 'GithubController@authorizations', 'as' => 'authorizations']);*/
 
 
 Route::post('/events', ['uses' => 'GithubController@storeEvents']);
