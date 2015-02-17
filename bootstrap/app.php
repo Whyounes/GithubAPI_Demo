@@ -41,7 +41,7 @@ $app->singleton(
     'App\Exceptions\Handler'
 );
 
-$app->singleton('GithubClient', function () {
+$app->singleton('Github\Client', function () {
   $client = new Github\Client();
   $token = env('GITHUB_TOKEN');
 

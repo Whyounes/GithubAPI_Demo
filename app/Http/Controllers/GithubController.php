@@ -18,12 +18,11 @@ class GithubController extends Controller
    * */
   private $username;
 
-  public function __construct()
+  public function __construct(\Github\Client $client)
   {
-    $this->client = App::make('GithubClient');
+    $this->client = $client;
     $this->username = env('GITHUB_USERNAME');
   }
-
 
   public function index()
   {

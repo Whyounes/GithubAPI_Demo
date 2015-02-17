@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59724c3f6dde45d6308680fdd393861a",
+    "hash": "b32192d5eefb4ccc26c6bea67dd8a8c8",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -315,6 +315,50 @@
             "time": "2014-08-11 04:32:36"
         },
         {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "v63",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "62bddfebfd8c3e79b9710d11d558e07727356484"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/62bddfebfd8c3e79b9710d11d558e07727356484",
+                "reference": "62bddfebfd8c3e79b9710d11d558e07727356484",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "http://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2015-02-10 23:24:07"
+        },
+        {
             "name": "illuminate/html",
             "version": "dev-master",
             "source": {
@@ -548,16 +592,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "c4fb5fe66df44efa83a7236c3e18dca557649217"
+                "reference": "d49e34124f8c6a5ce326ba508f597913ab09fa58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/c4fb5fe66df44efa83a7236c3e18dca557649217",
-                "reference": "c4fb5fe66df44efa83a7236c3e18dca557649217",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/d49e34124f8c6a5ce326ba508f597913ab09fa58",
+                "reference": "d49e34124f8c6a5ce326ba508f597913ab09fa58",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +618,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -605,7 +649,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2014-12-22 23:59:03"
+            "time": "2015-02-12 23:29:28"
         },
         {
             "name": "laravel/framework",
@@ -613,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b5eafda7dba3d1367a63095b83a068a73d32d97f"
+                "reference": "5a4b2b37f41866c072eec28d3817f1a27063c401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b5eafda7dba3d1367a63095b83a068a73d32d97f",
-                "reference": "b5eafda7dba3d1367a63095b83a068a73d32d97f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5a4b2b37f41866c072eec28d3817f1a27063c401",
+                "reference": "5a4b2b37f41866c072eec28d3817f1a27063c401",
                 "shasum": ""
             },
             "require": {
@@ -730,7 +774,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-11 20:37:48"
+            "time": "2015-02-17 04:53:19"
         },
         {
             "name": "league/flysystem",
@@ -1062,16 +1106,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.3.4",
+            "version": "v0.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "218ea9e49c9fe21e28fce6cf77f22615af92daef"
+                "reference": "2ce0e8f3020fd292c2ad2a496c5d83939823f642"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/218ea9e49c9fe21e28fce6cf77f22615af92daef",
-                "reference": "218ea9e49c9fe21e28fce6cf77f22615af92daef",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2ce0e8f3020fd292c2ad2a496c5d83939823f642",
+                "reference": "2ce0e8f3020fd292c2ad2a496c5d83939823f642",
                 "shasum": ""
             },
             "require": {
@@ -1121,14 +1165,14 @@
                 }
             ],
             "description": "An interactive shell for modern PHP.",
-            "homepage": "https://github.com/bobthecow/psysh",
+            "homepage": "http://psysh.org",
             "keywords": [
                 "REPL",
                 "console",
                 "interactive",
                 "shell"
             ],
-            "time": "2015-02-12 05:21:32"
+            "time": "2015-02-12 19:35:52"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1980,50 +2024,6 @@
                 "instantiate"
             ],
             "time": "2014-10-13 12:58:55"
-        },
-        {
-            "name": "heroku/heroku-buildpack-php",
-            "version": "v63",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "62bddfebfd8c3e79b9710d11d558e07727356484"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/62bddfebfd8c3e79b9710d11d558e07727356484",
-                "reference": "62bddfebfd8c3e79b9710d11d558e07727356484",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/heroku-hhvm-apache2",
-                "bin/heroku-hhvm-nginx",
-                "bin/heroku-php-apache2",
-                "bin/heroku-php-nginx"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Zuelke",
-                    "email": "dz@heroku.com"
-                }
-            ],
-            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
-            "homepage": "http://github.com/heroku/heroku-buildpack-php",
-            "keywords": [
-                "apache",
-                "apache2",
-                "foreman",
-                "heroku",
-                "hhvm",
-                "nginx",
-                "php"
-            ],
-            "time": "2015-02-10 23:24:07"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
