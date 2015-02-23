@@ -7,5 +7,4 @@ class Hook extends Model
 
   protected $table = 'hooks';
 
-
 }
